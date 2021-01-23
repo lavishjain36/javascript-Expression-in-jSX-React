@@ -6,28 +6,17 @@ import React from "react";
 
 //its possible for render(0 to return an array of elements in react 16 vers or greater
 ReactDOM.render(
-  [
-    <h1>Hello People. This is Lavish.</h1>,
-    <p>I am from Pune</p>,
-    <label htmlFor="">Enter Your Name</label>,
-    <input type="text" />,
-  ],
+  <React.Fragment>
+    <h1>Hello People. This is Lavish.</h1>
+    <p>I am from Pune</p>
+    <label htmlFor="">Enter Your Name</label>
+    <input type="text" />
+  </React.Fragment>,
   document.getElementById("root")
-
-  //div tag concept
-
-  // <div>
-  //   <h1>Hello People. This is Lavish.</h1>
-  //   <p>I am from Pune</p>
-  //   <label htmlFor="">Enter Your Name</label>
-  //   <input type="text" />
-  // </div>,
-
-  // document.getElementById("root")
 );
 
-// How to USe multiple jsx element inside one render method?
-// if we dont use div, then we would get an error
-// Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?
-
-// SO ,we should keep it inside a div tag
+//React Fragment is same as div but it is faster than div.
+//it consume less memory
+//if we dont use React.Fragment ,we would not get error
+//Its is Special fragment Syntax
+//React 16.x is also a syntactic sugar fragment
